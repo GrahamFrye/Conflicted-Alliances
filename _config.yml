@@ -1,3 +1,5 @@
 name: Conflicted Alliances
 markdown: kramdown
+url: http://grahamfrye.github.io
+baseurl: /Conflicted-Allioances
 permalink: /blog/:year/:month/:day/:title
