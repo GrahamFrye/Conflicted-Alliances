@@ -1,6 +1,589 @@
----
-layout: default
-title: Chaz Moondash III
----
+<!DOCTYPE html>
+	<html>
+		<head>
+      <!-- https://postimages.org/ is where I host the images -->
+			<title>Chaz Moondash III</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="character-sheet.css">
+		</head>
 
-<p> blah blah blah </p>
+    <body>
+      <div id="outer-boundary">
+        <div class="one-page" id="main-stats-page">
+          <!--BASIC INFO----------------->
+          <div class="basic-info">
+              <div class="basic-info-text">
+                <p class="character-name">Chaz Moondash III</p>
+                <p class="character-concept">Spoiled rich kid obsesssed with engines and speed</p>
+                <p><span class="underline">Campaign</span>: Conflicted Alliances</p>
+                <p><span class="underline">Species/Career</span>: Human Engineer</p>   
+                <p><span class="underline">Specializations</span>: Mechanic, Artisan, Racer, Soresu Defender</p>
+              </div><!--basic-info-text-->
+              
+              <div class="character-portrait">
+                <img id="chaz-portrait" src="https://i.postimg.cc/263Zp606/Chaz-Portrait.jpg" alt="Portait of Chaz Moondash III." width="250px" height="auto">
+                
+              </div><!--character-portrait-->
+
+              <div id="character-description">
+                <p>Notable Features</p>
+                <ul>
+                  <li>Square Jaw</li>
+                  <li>Hair always in place</li>
+                  <li>High cheek bones</li>
+                  <li>well-groomed eyebrows</li>
+                  <li>piercing blue eyes</li>
+                </ul>
+                <p>Age: 16<br>
+                  Height: 5' 10"<br>
+                  Build: Athletic</p>
+              </div><!-- notable features-->
+
+            </div><!--basic-info-->
+
+            <!--CHARACTERISTICS--------------------------------->
+            
+            <div class="characteristics-section area-division">
+              <p class="area-division-title">Characteristics</p>
+              <div class="characteristic">
+                <p class="value">3</p>
+                <p class="label">BRAWN</p>
+              </div><!--characteristic-->
+            
+              <div class="characteristic">
+                <p class="value">3</p>
+                <p class="label">AGILITY</p>
+              </div><!--characteristic-->
+            
+              <div class="characteristic">
+                <p class="value">3</p>
+                <p class="label">INTELLECT</p>
+              </div><!--characteristic-->
+            
+              <div class="characteristic">
+                <p class="value">2</p>
+                <p class="label">CUNNING</p>
+              </div><!--characteristic-->
+            
+              <div class="characteristic">
+                <p class="value">3</p>
+                <p class="label">WILLPOWER</p>
+              </div><!--characteristic-->
+            
+              <div class="characteristic">
+                <p class="value">3</p>
+                <p class="label">PRESENCE</p>
+              </div><!--characteristic-->
+            
+            </div><!--characterisics-section-->
+            
+            <!--ATTRIBUTES-------------------------------------->
+            <div class="attributes-section area-division">
+              <p class="area-division-title">Attributes</p>
+              <form id="attribute-form" action="" method="get">
+                <div id="attribute-combat">
+                  <label id="wounds-label" for="wounds">Wounds (17):</label>
+                  <input type="text" id="wounds" name="wounds">
+                  <label id="strain-label" for="strain">Strain (16):</label>
+                  <input type="text" id="strain" name="strain">
+                  <p>Defenses: Ranged - 1 / Melee - 1</p>
+                  <p>Soak: 4 (+1 from Jedi Robes)</p>
+                  </div><!--attribute-combat-->
+
+              </form><!--atrtibute-form-->
+
+            </div>
+
+
+
+
+
+            <!--SKILLS-------------------------------------->
+            
+            <div id="skills">
+              <p class="area-division-title">skills</p>
+              <table id="skills-general" class="skill-table table-general">
+                <colgroup>
+                  <col class="st-col1">
+                  <col class="st-col2">
+                  <col class="st-col3">
+                  <col class="st-col4">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>General Skills</th>
+                    <th>Char</th>
+                    <th>Rank</th>
+                    <th>Pool</th>
+                  </tr>
+                </thead>
+                <!-- Skill Start -->
+                <tbody>
+                  <tr>
+                    <td>Astrogation</td>
+                    <td>Int</td>
+                    <td>2*</td>
+                    <td>YYG -K</td>
+                  </tr>
+                  <tr>
+                    <td>Athletics</td>
+                    <td>Br</td>
+                    <td>2*</td>
+                    <td>YYG -K 4F</td>
+                  </tr>
+                  <tr>
+                    <td>Charm</td>
+                    <td>Pr</td>
+                    <td>1</td>
+                    <td>YGG</td>
+                  </tr>
+                  <tr>
+                    <td>Coercion </td>
+                    <td>Wil </td>
+                    <td>0</td>
+                    <td>GGG</td>
+                  </tr>
+                  <tr>
+                    <td>Computers</td>
+                    <td>Int</td>
+                    <td>1*</td>
+                    <td>YGG</td>
+                  </tr>
+                  <tr>
+                    <td>Cool</td>
+                    <td>Pr</td>
+                    <td>2*</td>
+                    <td>YYG</td>
+                  </tr>
+                  <tr>
+                    <td>Coordination</td>
+                    <td>Ag</td>
+                    <td>1*</td>
+                    <td>YGG -K 4F</td>
+                  </tr>
+                  <tr>
+                    <td>Cybernetics</td>
+                    <td>Int</td>
+                    <td>0</td>
+                    <td>GGG</td>
+                  </tr>
+                  <tr>
+                    <td>Deception</td>
+                    <td>Cun</td>
+                    <td>0</td>
+                    <td>GG</td>
+                  </tr>
+                  <tr>
+                    <td>Discipline</td>
+                    <td>Wil</td>
+                    <td>1*</td>
+                    <td>YGG</td>
+                  </tr>
+                  <tr>
+                    <td>Leadership</td>
+                    <td>Pr</td>
+                    <td>0</td>
+                    <td>GGG</td>
+                  </tr>
+                  <tr>
+                    <td>Mechanics</td>
+                    <td>Int</td>
+                    <td>3*</td>
+                    <td>YYY -K 4F</td>
+                  </tr>
+                  <tr>
+                    <td>Medicine</td>
+                    <td>Int</td>
+                    <td>0</td>
+                    <td>GGG</td>
+                  </tr>
+                  <tr>
+                    <td>Negotiation</td>
+                    <td>Pr</td>
+                    <td>0</td>
+                    <td>GGG</td>
+                  </tr>
+                  <tr>
+                    <td>Perception</td>
+                    <td>Cun</td>
+                    <td>1*</td>
+                    <td>YG</td>
+                  </tr>
+                  <tr>
+                    <td>Pilot-Planet</td>
+                    <td>Ag</td>
+                    <td>3*</td>
+                    <td>YYY -K 4F</td>
+                  </tr>
+                  <tr>
+                    <td>Pilot-Space</td>
+                    <td>Ag</td>
+                    <td>1*</td>
+                    <td>YGG -K 4F
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Resilience</td>
+                    <td>Br</td>
+                    <td>0</td>
+                    <td>GGG 4F</td>
+                  </tr>
+                  <tr>
+                    <td>Skulduggery</td>
+                    <td>Cun</td>
+                    <td>1*</td>
+                    <td>YG</td>
+                  </tr>
+                  <tr>
+                    <td>Stealth</td>
+                    <td>Ag</td>
+                    <td>0</td>
+                    <td>GGG</td>
+                  </tr>
+                  <tr>
+
+                </tbody>
+              </table>
+
+
+              <div id="skills2">
+                <table id="skills-general2" class="skill-table table-general">
+                  <colgroup>
+                    <col class="st-col1">
+                    <col class="st-col2">
+                    <col class="st-col3">
+                    <col class="st-col4">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>General (Cont)</th>
+                      <th>Char</th>
+                      <th>Rank</th>
+                      <th>Pool</th>
+                    </tr>
+                  </thead>
+  
+                  <tbody>
+                    <td>Streetwise</td>
+                    <td>Cun</td>
+                    <td>1</td>
+                    <td>YG</td>
+                  </tr>
+                  <tr>
+                      <td>Survival</td>
+                    <td>Cun</td>
+                    <td>0</td>
+                    <td>GG</td>
+                  </tr>
+                  <tr>
+                    <td>Vigilance</td>
+                    <td>Wil</td>
+                    <td>1*</td>
+                    <td>YGG</td>
+                  </tr>
+                  </tbody>
+                </table>
+            
+                <table id="skills-combat" class="skill-table table-general">
+                  <colgroup>
+                    <col class="st-col1">
+                    <col class="st-col2">
+                    <col class="st-col3">
+                    <col class="st-col4">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Combat Skills</th>
+                      <th>Char</th>
+                      <th>Rank</th>
+                      <th>Pool</th>
+                    </tr>
+                  </thead>
+                  <!-- Skill Start -->
+                  <tbody>
+                    <tr>
+                      <td>Brawl</td>
+                      <td>Br</td>
+                      <td>2*</td>
+                      <td>YYG 4F</td>
+                    </tr>
+                    <tr>
+                      <td>Gunnery</td>
+                      <td>Ag</td>
+                      <td>1</td>
+                      <td>YGG</td>
+                    </tr>
+                    <tr>
+                      <td>Lightsaber</td>
+                      <td>Br</td>
+                      <td>0*</td>
+                      <td>GGG</td>
+                    </tr>
+                    <tr>
+                      <td>Melee</td>
+                      <td>Br</td>
+                      <td>0</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Ranged-Heavy</td>
+                      <td>Ag</td>
+                      <td>0</td>
+                      <td>GGG</td>
+                    </tr>
+                    <tr>
+                      <td>Ranged-Light</td>
+                      <td>Ag</td>
+                      <td>2*</td>
+                      <td>YYG</td>
+                    </tr>
+                  </tbody>
+                </table>
+              
+                <table id="skills-knowledge" class="skill-table table-general">
+                  <colgroup>
+                    <col class="st-col1">
+                    <col class="st-col2">
+                    <col class="st-col3">
+                    <col class="st-col4">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Knowledge Skills</th>
+                      <th>Char</th>
+                      <th>Rank</th>
+                      <th>Pool</th>
+                    </tr>
+                  </thead>
+                  <!-- Skill Start -->
+                  <tbody>
+                    <tr>
+                      <td>Core Worlds</td>
+                      <td>Int</td>
+                      <td>0</td>
+                      <td>GGG</td>
+                    </tr>
+                    <tr>
+                      <td>Education</td>
+                      <td>Int</td>
+                      <td>2*</td>
+                      <td>YYG</td>
+                    </tr>
+                    <tr>
+                      <td>Lore</td>
+                      <td>Int</td>
+                      <td>1*</td>
+                      <td>YGG</td>
+                    </tr>
+                    <tr>
+                      <td>Outer Rim</td>
+                      <td>Int</td>
+                      <td>0</td>
+                      <td>GGG</td>
+                    </tr>
+                    <tr>
+                      <td>Underwolrd</td>
+                      <td>Int</td>
+                      <td>1</td>
+                      <td>YGG</td>
+                    </tr>
+                    <tr>
+                      <td>Warfare</td>
+                      <td>Int</td>
+                      <td>0</td>
+                      <td>GGG</td>
+                    </tr>
+                    <tr>
+                      <td>Xenology</td>
+                      <td>Int</td>
+                      <td>0</td>
+                      <td>GGG</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><!--skills2-->
+            </div><!--skills-->
+        </div><!--main-stats-->
+
+        <div class="one-page" id="talents-page">
+          <div class="area-division">
+            <p class="area-division-title">Talents</p>
+            <table class="talent-table table-general">
+              <colgroup>
+                <col class="tt-col1">
+                <col class="tt-col2">
+                <col class="tt-col3">
+                <col class="tt-col4">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Talent</th>
+                  <th>Rank</th>
+                  <th>From</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <!-- Talents Start -->
+              <tbody>
+                <tr>
+                  <td>Conditioned</td>
+                  <td>1</td>
+                  <td>Racer</td>
+                  <td>-K per rank for Athletics & Coordination checks.
+                     -1 damage+strain per rank from falling damage. </td>
+                </tr>
+                <tr>
+                  <td>Fine Tuning</td>
+                  <td>2</td>
+                  <td>Mechanic, Artisan</td>
+                  <td>Repair 1 additional system strain on vehicle
+                     or starship per rank.</td>
+                </tr>
+                <tr>
+                  <td>Full Throttle</td>
+                  <td>A</td>
+                  <td>Racer</td>
+                  <td>Roll a PPP pilot check. Success increases
+                     ship's top speed by 1 for Cunning rounds.</td>
+                </tr>
+                <tr>
+                  <td>Gearhead</td>
+                  <td>1</td>
+                  <td>Mechanic</td>
+                  <td>-K per rank from  Mechanics checks. Credit 
+                    cost to add mods to attachements is half.</td>
+                </tr>
+                <tr>
+                  <td>Grit</td>
+                  <td>3</td>
+                  <td>Racer, Artisan</td>
+                  <td>Gain +1 strain threshold</td>
+                </tr>
+                <tr>
+                  <td>Imbue Item</td>
+                  <td>M*</td>
+                  <td>Artisan</td>
+                  <td>Suffer 1 strain and commit F. Grant one 
+                    weapon or item in short range one of the following: 
+                    +1 damage, -1 adv to activate Crit or other effect, 
+                    min 1, OR +1 melee or ranged defense for armor, 
+                    OR decrease an item's encumberance by 2, min 1.
+                    <br>Suffer 1 strain each turn while force die is committed. </td>
+                </tr>
+                <tr>
+                  <td>Mental Tools</td>
+                  <td>*</td>
+                  <td>Artisan</td>
+                  <td>Always counts as having the right tools for 
+                    the job when performing Mechanics checks.</td>
+                </tr>
+                <tr>
+                  <td>Short Cut</td>
+                  <td>3</td>
+                  <td>Racer</td>
+                  <td>During a chase, add B per rank  to checks made
+                     to catch or escape an opponent.</td>
+                </tr>
+                <tr>
+                  <td>Skilled Jockey</td>
+                  <td>1</td>
+                  <td>Racer</td>
+                  <td>-K per rank for Piloting checks.</td>
+                </tr>
+                <tr>
+                  <td>Solid Repairs</td>
+                  <td>3</td>
+                  <td>Mechanic, Artisan</td>
+                  <td>When repairing hull trauma, repair +1 per rank.</td>
+                </tr>
+                <tr>
+                  <td>Technical Aptitude</td>
+                  <td>1</td>
+                  <td>Artisan</td>
+                  <td>Reduce time needed to complete computer-related
+                     tasks by 25%</td>
+                </tr>
+                <tr>
+                  <td>Toughened</td>
+                  <td>2</td>
+                  <td>Mechanic, Soresu Defender</td>
+                  <td>Gain +2 wound threshold</td>
+                </tr>
+                <tr>
+                  <td>Parry</td>
+                  <td>IO1</td>
+                  <td>Soresu Defender</td>
+                  <td>When hit by Brawl, Lightsaber, or Melee, take 3
+                     strain and reduce damage by 3 plus ranks. 
+                     Once per hit. Must be using lightsaber or melee weapon.</td>
+                </tr>
+                <tr>
+                  <td>Defensive Stance</td>
+                  <td>M1</td>
+                  <td>Soresu Defender</td>
+                  <td>Once per round, on turn. Take strain S <= ranks:
+                     until start of next turn, upgrade difficulty of all
+                      melee checks S times.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!--area-division-->
+        </div><!--talents-page-->
+
+        <div class="one-page" id="force-page">
+          <div class="area-division">
+            <p class="area-division-title">Force</p>
+         
+        </div><!--force-page-->
+        <table id="force-powers" class="force-table table-general">
+          <colgroup>
+            <col class="ft-col1">
+            <col class="ft-col2">
+            <col class="ft-col3">
+            <col class="ft-col4">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Power</th>
+              <th>Upgrade</th>
+              <th>Ranks</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <!-- Skill Start -->
+          <tbody>
+            <tr>
+              <td>Enhance</td>
+              <td>Basic</td>
+              <td>1</td>
+              <td>
+                <details>
+                  <summary>This is how this power works.</summary>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quod, soluta libero eos perferendis tempore harum cupiditate corrupti laborum laboriosam dolores voluptate reprehenderit eius unde itaque natus maiores quaerat ad.
+                </details>
+                </td>
+            </tr>
+            <tr>
+              <td>Enhance</td>
+              <td>Basic</td>
+              <td>1</td>
+              <td>Lorem ipsum dolor, <span class="hide">
+              ulpa quod, soluta libero eos perferendis tempore harum cupiditate corrupti laborum laboriosam dolores voluptate reprehenderit eius unde itaque natus maiores quaerat ad.</span>
+                 </td>
+              </tr> 
+            <tr>
+              <td>Enhance</td>
+              <td>Basic</td>
+              <td>1</td>
+              <td>Lorem ipsum dolor, sit amet <span class="hide">consectetur adipisicing elit. Culpa quod, soluta libero eos perferendis tempore harum cupiditate corrupti laborum laboriosam dolores voluptate reprehenderit eius unde itaque natus maiores quaerat ad.</span></td>
+            </tr> 
+            <tr>
+              <td>Enhance</td>
+              <td>Basic</td>
+              <td>1</td>
+              <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quod, soluta libero eos perferendis tempore harum cupiditate corrupti laborum laboriosam dolores voluptate reprehenderit eius unde itaque natus maiores quaerat ad.</td>
+            </tr> 
+        </table>
+      </div><!--outer-boundary-->
+    </body>
+  </html>

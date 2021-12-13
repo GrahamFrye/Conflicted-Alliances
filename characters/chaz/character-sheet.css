@@ -1,0 +1,408 @@
+/*###########################################################################################################*/
+/* SECTION-page setup */
+#outer-boundary {
+  max-width: 1900px;
+  background-color: darkblue;
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 5px;
+  gap: 10px;
+  justify-content: space-around;
+  align-content: space-around;
+  
+  
+}
+
+
+
+.one-page{
+  display: flex;
+  flex-direction: column;
+  min-width: 900px;
+  max-width: 900px;
+  flex: 1;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.area-division {
+  
+  box-sizing: border-box;
+  margin-top: 12px;
+}
+
+.area-division-title {
+  text-align: center;
+  
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  top: -12px;
+  text-transform: uppercase;
+  z-index: 2;
+  
+  
+}
+
+.area-division-title::before, 
+.area-division-title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  
+
+}
+
+.area-division-title::before {
+  background: yellow;
+  height: 100%;
+  width: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+
+}
+
+.area-division-title::after {
+  background: orange;
+  height: .2em;
+  top: 50%;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2
+  ;
+}
+
+
+#main-stats-page {
+  background-color: beige;
+}
+
+#talents-page {
+  background-color: bisque;
+}
+
+#force-page{
+  background-color: silver;
+}
+
+/*###########################################################################################################*/
+/* SECTION-utilities */
+
+.underline {
+  text-decoration: underline;
+}
+
+
+
+
+/*###########################################################################################################*/
+/* SECTION-skills */
+
+#skills {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  justify-content: flex-start;
+  gap: 15px;
+  
+  
+}
+
+#skills2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  
+}
+
+.skill-table{
+    border-collapse: collapse;
+  
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 360px;
+    max-width: 360px;
+    flex: 1;
+   
+    
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /* background-color: LightGray; */
+    /* border: 1px solid black; */
+    
+  }
+  
+  .skill-table thead tr{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .skill-table th,
+  .skill-table td {
+    padding: 5px 5px;
+  }
+  
+  .skill-table tbody tr {
+    border-bottom: thin solid #dddddd;
+  }
+  
+  .skill-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .skill-table tbody tr:last-of-type {
+    border-bottom: medium solid #009879;
+  }
+  
+  .skill-table tbody tr:hover {
+    font-weight: bold;
+    color: #009879;
+  }
+  
+  
+  .st-col1{
+    width: 10.5em;
+    
+  }
+  
+  .st-col2{
+    width: 3em;
+    
+  }
+  
+  .st-col3{
+    width: 3em;
+    
+  }
+  
+  .st-col4{
+    width: 7em;
+    
+  }
+  
+/*###########################################################################################################*/
+/* SECTION-characteristics */
+
+
+  .characteristics-section {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    
+  }
+  
+  .characteristic {
+    display: inline;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: LightBlue;
+    width: 7em;
+    height: auto;
+    margin: 0.5em;
+    padding: 2px;
+    
+    border-color: Black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    
+  }
+  
+  
+  
+  .characteristic .value {
+    margin: auto;
+    /*margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0;
+    margin-right: 0; */
+      
+    font-size: 3em;
+    font-weight: bold;
+    width: 1em;
+    text-align: center;
+    
+    background-color: LightCoral;
+    border-color: DarkGray;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 50%;
+      
+  }
+  
+  .characteristic .label {
+    margin: 0px;
+    /* margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0;
+    margin-right: 0; */
+      
+    font-size: 1em;
+    font-weight: bold;
+    
+    background-color: LightSteelBlue;
+    border-color: DarkGray;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 3px;
+    
+  }
+  
+/*###########################################################################################################*/
+/* SECTION-basic-info */
+
+
+  
+  .basic-info {
+    display: flex;
+    background-color: red;
+    column-gap: 1em;
+    align-content: top;
+    height: 250px;
+
+
+  }
+  
+  .basic-info .basic-info-text {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: LightBlue;
+  }
+  
+  .basic-info .basic-info-text p {
+    background-color: Yellow;
+    margin: 3px;
+    padding: .1em;
+    
+    font-family: sans-serif;
+    
+  }
+  
+  
+  .character-name{
+    font-size: 3em;
+    text-align: center;
+  }
+  
+  .character-concept {
+    font-style: italic;
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  .basic-info .character-portrait { 
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-content: center;
+    
+    
+    
+    
+    
+  }
+
+  #chaz-portrait {
+    border: 1px solid blue;
+    border-radius: 30%;
+    transform: scale(0.9);
+  }
+  
+ /*###########################################################################################################*/
+ /* attributes-section */
+
+ .attributes-section {
+   display: flex;
+   flex-wrap: wrap;
+   
+ }
+
+ .attributes-section input {
+   width: 4ch;
+ }
+
+#attribute-combat {
+  flex-direction: row;
+
+  
+}
+
+/*######################################################################################################################################*/
+/* talent-section */
+
+#talent-table {
+ 
+  border-collapse: collapse;
+
+  font-size: 1em;
+  font-family: sans-serif;
+  width: 100%;
+ 
+
+ 
+  
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  /* background-color: LightGray; */
+  /* border: 1px solid black; */
+  
+}
+
+#talent-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+#talent-table th,
+#talent-table td {
+  padding: 5px 5px;
+}
+
+#talent-table tbody tr {
+  border-bottom: thin solid #dddddd;
+}
+
+#talent-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+#talent-table tbody tr:last-of-type {
+  border-bottom: medium solid #009879;
+}
+
+#talent-table tbody tr:hover {
+  font-weight: bold;
+  color: #009879;
+}
+
+
+.tt-col1{
+  width: 15%;
+  
+}
+
+.tt-col2{
+  width: 5%;
+  
+}
+
+.tt-col3{
+  width: 20%;
+  
+}
+
+.tt-col4{
+  Border: none;
+  
+}
