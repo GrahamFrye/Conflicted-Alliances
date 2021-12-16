@@ -112,12 +112,16 @@
   text-decoration: underline;
 }
 
+.hide {
+  display: none;
+}
+
 .table-general {
   --table-shadow-color: rgba(70, 70, 250, 0.55);
   --table-bg-color:  var(--main-bg-color, darkblue);
   --table-head-bg-color: rgb(17, 70, 40);
   --table-text-color: var(--main-text-color, lightgray);
-  --table-row-border-color: #dddddd;
+  --table-row-border-color: #707070;
 
 
   border-collapse: collapse;
@@ -147,12 +151,13 @@
 }
 
 .table-general tbody tr:nth-of-type(even) {
-  background-color: #3f3f3f;
+  background-color: #1f1f1f;
 }
 
 .table-general tbody tr:last-of-type {
   border-bottom: medium solid #007969;
 }
+
 
 /*###########################################################################################################*/
 /* SECTION-skills */
@@ -210,6 +215,9 @@
   
 }
 
+#talents td:hover .hide {
+  display: block;
+}
 
 /*###########################################################################################################*/
 /* SECTION-Force */
@@ -223,24 +231,14 @@
   
 }
 
-.ft-col1 {
-  width: 10%;
-  background-color: #006900;
-  
-}
-
-.ft-col2 {  width: 10%;}
+.ft-col1 { width: 10%;} 
+.ft-col2 { width: 15%;}
 .ft-col3 { width: 5%;}
 .ft-col4 { width: auto;}
 
-.hide {
-  display: none;
-}
 
-/* td:hover + .hide {
-  display: block;
-  
-} */
+
+
 
 #force-powers td:hover .hide {
   display: block;
@@ -341,7 +339,7 @@
   
   
   .character-name{
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
     color: orange;
   }
@@ -357,17 +355,14 @@
     padding: 0px;
     justify-content: center;
     align-content: center;
-    
-    
-    
-    
-    
+        
   }
 
   #chaz-portrait {
     border: 1px solid blue;
     border-radius: 30%;
     transform: scale(0.9);
+    box-shadow: -5px -5px 15px rgba(5, 114, 255, 0.9), 5px 5px 15px rgba(120,10,10, 0.9);
   }
   
  /*###########################################################################################################*/
@@ -379,13 +374,28 @@
    
  }
 
+#attribute-form {
+  width:100%;
+  font-size: 1.2em;
+}
+
  .attributes-section input {
    width: 4ch;
+   background-color: #202020;
+   color: white;
+   font-size: 1.2em;
+   
  }
 
 #attribute-combat {
-  flex-direction: row;
-
+  display: flex;
+  background-color: rgba(139, 0, 0, 0.637);
+  justify-content: space-around;
+  align-content: center;
+  border-radius: 4px;
   
 }
 
+#attribute-combat span{
+ margin-top: 0.7em;
+}

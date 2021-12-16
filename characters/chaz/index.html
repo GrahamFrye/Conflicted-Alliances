@@ -83,10 +83,10 @@
               <p class="area-division-title">Attributes</p>
               <form id="attribute-form" action="" method="get">
                 <div id="attribute-combat">
-                  <label id="wounds-label" for="wounds">Wounds (17):</label>
-                  <input type="text" id="wounds" name="wounds">
-                  <label id="strain-label" for="strain">Strain (16):</label>
-                  <input type="text" id="strain" name="strain">
+                  <span><label id="wounds-label" for="wounds">Wounds (17):</label>
+                  <input type="text" id="wounds" name="wounds" placeholder="OK"></span>
+                  <span><label id="strain-label" for="strain">Strain (16):</label>
+                  <input type="text" id="strain" name="strain" placeholder="OK"></span>
                   <p>Defenses: Ranged - 1 / Melee - 1</p>
                   <p>Soak: 4 (+1 from Jedi Robes)</p>
                   </div><!--attribute-combat-->
@@ -406,10 +406,12 @@
             </div><!--skills-->
         </div><!--main-stats-->
 
+        <!--TALENTS PAGE---------------------------------------------------------------------------------------->
+
         <div class="one-page" id="talents-page">
           <div class="area-division">
             <p class="area-division-title">Talents</p>
-            <table class="talent-table table-general">
+            <table id="talents" class="talent-table table-general">
               <colgroup>
                 <col class="tt-col1">
                 <col class="tt-col2">
@@ -431,7 +433,7 @@
                   <td>1</td>
                   <td>Racer</td>
                   <td>-K per rank for Athletics & Coordination checks.
-                     -1 damage+strain per rank from falling damage. </td>
+                    <span class="hide">-1 damage / strain per rank from falling damage.</span></td>
                 </tr>
                 <tr>
                   <td>Fine Tuning</td>
@@ -444,8 +446,9 @@
                   <td>Full Throttle</td>
                   <td>A</td>
                   <td>Racer</td>
-                  <td>Roll a PPP pilot check. Success increases
-                     ship's top speed by 1 for Cunning rounds.</td>
+                  <td>Action. Roll a Hard (PPP) Piloting check.
+                    <span class="hide"> Success increases
+                     ship's top speed by 1 for Cunning rounds. Ship cannot perform maneuvers it couldn't before.</span></td>
                 </tr>
                 <tr>
                   <td>Gearhead</td>
@@ -464,12 +467,13 @@
                   <td>Imbue Item</td>
                   <td>M*</td>
                   <td>Artisan</td>
-                  <td>Suffer 1 strain and commit F. Grant one 
-                    weapon or item in short range one of the following: 
-                    +1 damage, -1 adv to activate Crit or other effect, 
+                  <td>Maneuver. Suffer 1 strain and commit F. Grant one 
+                    weapon or item in short range one of the following:
+                    <span class="hide">
+                    +1 damage OR -1 adv to activate Crit or other effect, 
                     min 1, OR +1 melee or ranged defense for armor, 
                     OR decrease an item's encumberance by 2, min 1.
-                    <br>Suffer 1 strain each turn while force die is committed. </td>
+                    <br>Suffer 1 strain each turn while force die is committed.</span></td>
                 </tr>
                 <tr>
                   <td>Mental Tools</td>
@@ -514,16 +518,15 @@
                   <td>Parry</td>
                   <td>IO1</td>
                   <td>Soresu Defender</td>
-                  <td>When hit by Brawl, Lightsaber, or Melee, take 3
-                     strain and reduce damage by 3 plus ranks. 
-                     Once per hit. Must be using lightsaber or melee weapon.</td>
+                  <td>Take 3 strain and reduce damage by 3 plus ranks <span class="hide">when hit by Brawl, Lightsaber, or Melee attack.  
+                     Once per hit. Must be using lightsaber or melee weapon. Incedantal-Out of turn.</span></td>
                 </tr>
                 <tr>
                   <td>Defensive Stance</td>
                   <td>M1</td>
                   <td>Soresu Defender</td>
-                  <td>Once per round, on turn. Take strain S <= ranks:
-                     until start of next turn, upgrade difficulty of all
+                  <td>Maneuver. Once per round, on turn. Take strain S <= ranks:
+                     until start of next turn, upgrade difficulty of all incoming 
                       melee checks S times.</td>
                 </tr>
               </tbody>
@@ -534,57 +537,130 @@
         <div class="one-page" id="force-page">
           <div class="area-division">
             <p class="area-division-title">Force</p>
-         
+            <table id="force-powers" class="force-table table-general">
+              <colgroup>
+                <col class="ft-col1">
+                <col class="ft-col2">
+                <col class="ft-col3">
+                <col class="ft-col4">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Power</th>
+                  <th>Upgrade</th>
+                  <th>Ranks</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <!-- Powers Start -->
+              <tbody>
+                <tr>
+                  <td>Enhance</td>
+                  <td>Basic</td>
+                  <td>1</td>
+                  <td>
+                    <details>
+                      <summary>Roll Force dice with Athletics checks.</summary>
+                      When making an Athletics check, may roll an Enhance power check as part of the pool. May spend <em>L/D</em> to gain <em>Suc</em> or <em>Adv</em> on the check.
+                    </details>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Enhance</td>
+                  <td>Control: Coordination</td>
+                  <td>1</td>
+                  <td>Can be used with Coordination skill.</td>
+                </tr> 
+                <tr>
+                  <td>Enhance</td>
+                  <td>Control: Resilience</td>
+                  <td>1</td>
+                  <td>Can be used with Resilience skill.</td>
+                </tr>
+                <tr>
+                  <td>Enhance</td>
+                  <td>Control: Brawl</td>
+                  <td>1</td>
+                  <td>Can be used with Brawl skill.</td>
+                </tr>
+                <tr>
+                  <td>Enhance</td>
+                  <td>Control: Piloting-Planeary</td>
+                  <td>1</td>
+                  <td>Can be used with  Piloting-Planeary skill.</td>
+                </tr>
+                <tr>
+                  <td>Enhance</td>
+                  <td>Control: Piloting-Space</td>
+                  <td>1</td>
+                  <td>Can be used with Piloting-Space skill.</td>
+                </tr>
+                <tr>
+                  <td>Enhance</td>
+                  <td>Control: Force Leap (Horizontal)</td>
+                  <td>A1</td>
+                  <td>Take a Force Leap Action: Make an Enhance power check. May spend L/D to Jump horizontally to any location in short range.</td>
+                </tr>
+                <tr>
+                  <td>Heal/Harm</td> 
+                  <td>Basic</td>
+                  <td>1</td>
+                  <td><details> <summary>Spend L/D heal or inflict wounds equal to Intellect on engaged living target.</summary>
+                    Heal: Light side user only. May heal yourself.<br>Harm: Damage ignores soak. The user gains 1 Conflict.</details></td>
+                </tr>
+                <tr>
+                  <td>Manipulate</td>
+                  <td>Basic</td>
+                  <td>1</td>
+                  <td><details> <summary>Spend L/D to cause one engaged vehicle or starship to recover one system strain. </summary>
+                    May activate multiple times.</details></td>
+                </tr>
+                <tr>
+                  <td>Manipulate</td>
+                  <td>Control: Item Damage</td>
+                  <td>1</td>
+                  <td>Ongoing effect. Commit F. One damaged weapon or item counts as being undamaged.</td>
+                </tr>
+                <tr>
+                  <td>Manipulate</td>
+                  <td>Control: Increase System Strain</td>
+                  <td>1</td>
+                  <td>Ongoing effect. Commit F. Increase the system strain threshold of one engaged vehicle or starship by 3 per F committed.</td>
+                </tr>
+                <tr>
+                  <td>Manipulate</td>
+                  <td>Control: Mechanics</td>
+                  <td>1</td>
+                  <td>When making an Mechanics check, may roll an Enhance power check as part of the pool. May spend <em>L/D</em> to gain <em>Suc</em> or <em>Adv</em> on the check.</td>
+                </tr>
+                <tr>
+                  <td>Seek</td>
+                  <td>Basic</td>
+                  <td>1</td>
+                  <td><details>
+                    <summary>Find location of an object or see through illusions.</summary>
+                       <ul>
+                        <li>May spend 2 L/D to gain insight onto the general location or direction of a person or object that he knows about, regardless of current distance.</li>
+                        <li>May spend L/D and succeed at an average (PP) Vigilance check (or opposed Vigilance vs. Discipline check) to see through illusions.</li>
+                      </ul>
+                    </details></td>
+                </tr>
+                <tr>
+                  <td>Sense</td>
+                  <td>Basic</td>
+                  <td>1</td>
+                  <td><details>
+                    <summary>Spend L/D to sense:</summary>
+                       <ul>
+                        <li>all living things within short range.</li>
+                        <li>the current emotional state of one engaged living target.</li>
+                      </ul>
+                    </details></td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!--area-division-->
         </div><!--force-page-->
-        <table id="force-powers" class="force-table table-general">
-          <colgroup>
-            <col class="ft-col1">
-            <col class="ft-col2">
-            <col class="ft-col3">
-            <col class="ft-col4">
-          </colgroup>
-          <thead>
-            <tr>
-              <th>Power</th>
-              <th>Upgrade</th>
-              <th>Ranks</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <!-- Skill Start -->
-          <tbody>
-            <tr>
-              <td>Enhance</td>
-              <td>Basic</td>
-              <td>1</td>
-              <td>
-                <details>
-                  <summary>This is how this power works.</summary>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quod, soluta libero eos perferendis tempore harum cupiditate corrupti laborum laboriosam dolores voluptate reprehenderit eius unde itaque natus maiores quaerat ad.
-                </details>
-                </td>
-            </tr>
-            <tr>
-              <td>Enhance</td>
-              <td>Basic</td>
-              <td>1</td>
-              <td>Lorem ipsum dolor, <span class="hide">
-              ulpa quod, soluta libero eos perferendis tempore harum cupiditate corrupti laborum laboriosam dolores voluptate reprehenderit eius unde itaque natus maiores quaerat ad.</span>
-                 </td>
-              </tr> 
-            <tr>
-              <td>Enhance</td>
-              <td>Basic</td>
-              <td>1</td>
-              <td>Lorem ipsum dolor, sit amet <span class="hide">consectetur adipisicing elit. Culpa quod, soluta libero eos perferendis tempore harum cupiditate corrupti laborum laboriosam dolores voluptate reprehenderit eius unde itaque natus maiores quaerat ad.</span></td>
-            </tr> 
-            <tr>
-              <td>Enhance</td>
-              <td>Basic</td>
-              <td>1</td>
-              <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quod, soluta libero eos perferendis tempore harum cupiditate corrupti laborum laboriosam dolores voluptate reprehenderit eius unde itaque natus maiores quaerat ad.</td>
-            </tr> 
-        </table>
       </div><!--outer-boundary-->
     </body>
   </html>
