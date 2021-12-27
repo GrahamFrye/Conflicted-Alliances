@@ -4,7 +4,7 @@
       <!-- https://postimages.org/ is where I host the images -->
 			<title>Chaz Moondash III</title>
 			<!-- link to main stylesheet -->
-			<!-- <link rel="stylesheet" type="text/css" href="/css/character-sheet.css"> --> <!-- for working on pc at home -->
+			<link rel="stylesheet" type="text/css" href="/css/character-sheet.css"> <!-- for working on pc at home -->
      			<link rel="stylesheet" type="text/css" href="/Conflicted-Alliances/css/character-sheet.css"> <!-- for GitHub pages -->
 		</head>
 
@@ -83,12 +83,13 @@
               <p class="area-division-title">Attributes</p>
               <form id="attribute-form" action="" method="get">
                 <div id="attribute-combat">
-                  <span><label id="wounds-label" for="wounds">Wounds (17):</label>
+                  <span><label id="wounds-label" for="wounds">Wounds (17)</label>
                   <input type="text" id="wounds" name="wounds" placeholder="OK"></span>
-                  <span><label id="strain-label" for="strain">Strain (16):</label>
+                  <span><label id="strain-label" for="strain">Strain (16)</label>
                   <input type="text" id="strain" name="strain" placeholder="OK"></span>
-                  <p>Defenses: Ranged - 1 / Melee - 1</p>
-                  <p>Soak: 4 (+1 from Jedi Robes)</p>
+                  <p>Defenses: R1 / M1</p>
+                  <p>Soak: 4<br>(+1 from Jedi Robes)</p>
+                  <p>Parry: 5 / Reflect: 4</p>
                   </div><!--attribute-combat-->
 
               </form><!--atrtibute-form-->
@@ -317,8 +318,8 @@
                     <tr>
                       <td>Lightsaber</td>
                       <td>Br</td>
-                      <td>0*</td>
-                      <td>GGG</td>
+                      <td>1*</td>
+                      <td>YGG</td>
                     </tr>
                     <tr>
                       <td>Melee</td>
@@ -436,6 +437,14 @@
                     <span class="hide">-1 damage / strain per rank from falling damage.</span></td>
                 </tr>
                 <tr>
+                  <td>Defensive Stance</td>
+                  <td>M1</td>
+                  <td>Soresu Defender</td>
+                  <td>Maneuver. Once per round, on turn. Take strain S <= ranks:
+                     until start of next turn, upgrade difficulty of all incoming 
+                      melee checks S times.</td>
+                </tr>
+                <tr>
                   <td>Fine Tuning</td>
                   <td>2</td>
                   <td>Mechanic, Artisan</td>
@@ -447,6 +456,14 @@
                   <td>A</td>
                   <td>Racer</td>
                   <td>Action. Roll a Hard (PPP) Piloting check.
+                    <span class="hide"> Success increases
+                     ship's top speed by 1 for Cunning rounds. Ship cannot perform maneuvers it couldn't before.</span></td>
+                </tr>
+                <tr>
+                  <td>Full Throttle (Improved)</td>
+                  <td>M</td>
+                  <td>Racer</td>
+                  <td>May suffer one strain attempt Full Throttle as a Maneuver. Roll an Average (PP) Piloting check.
                     <span class="hide"> Success increases
                      ship's top speed by 1 for Cunning rounds. Ship cannot perform maneuvers it couldn't before.</span></td>
                 </tr>
@@ -483,6 +500,20 @@
                     the job when performing Mechanics checks.</td>
                 </tr>
                 <tr>
+                  <td>Parry</td>
+                  <td>IO2</td>
+                  <td>Soresu Defender</td>
+                  <td>Take 3 strain and reduce damage by 3 plus ranks <span class="hide">when hit by Brawl, Lightsaber, or Melee attack.  
+                     Once per hit. Must be using lightsaber or melee weapon. Incedantal-Out of turn.</span></td>
+                </tr>
+                <tr>
+                  <td>Reflect</td>
+                  <td>IO1*</td>
+                  <td>Soresu Defender</td>
+                  <td>Take 3 strain and reduce damage by 3 plus ranks <span class="hide">when hit by a ranged attack.  
+                     Once per hit. Must be using lightsaber. Incedantal-Out of turn.</span></td>
+                </tr>
+                <tr>
                   <td>Short Cut</td>
                   <td>3</td>
                   <td>Racer</td>
@@ -502,6 +533,12 @@
                   <td>When repairing hull trauma, repair +1 per rank.</td>
                 </tr>
                 <tr>
+                  <td>Soresu Technique</td>
+                  <td>1*</td>
+                  <td>Soresu Defender</td>
+                  <td>When making a lightsaber check, may use Intellect instead of Brawn</td>
+                </tr>
+                <tr>
                   <td>Technical Aptitude</td>
                   <td>1</td>
                   <td>Artisan</td>
@@ -514,25 +551,13 @@
                   <td>Mechanic, Soresu Defender</td>
                   <td>Gain +2 wound threshold</td>
                 </tr>
-                <tr>
-                  <td>Parry</td>
-                  <td>IO1</td>
-                  <td>Soresu Defender</td>
-                  <td>Take 3 strain and reduce damage by 3 plus ranks <span class="hide">when hit by Brawl, Lightsaber, or Melee attack.  
-                     Once per hit. Must be using lightsaber or melee weapon. Incedantal-Out of turn.</span></td>
-                </tr>
-                <tr>
-                  <td>Defensive Stance</td>
-                  <td>M1</td>
-                  <td>Soresu Defender</td>
-                  <td>Maneuver. Once per round, on turn. Take strain S <= ranks:
-                     until start of next turn, upgrade difficulty of all incoming 
-                      melee checks S times.</td>
-                </tr>
               </tbody>
             </table>
           </div><!--area-division-->
         </div><!--talents-page-->
+
+
+        <!--FORCE PAGE ----------------------------------------------------------------------------------------->
 
         <div class="one-page" id="force-page">
           <div class="area-division">
@@ -561,7 +586,8 @@
                   <td>
                     <details>
                       <summary>Roll Force dice with Athletics checks.</summary>
-                      When making an Athletics check, may roll an Enhance power check as part of the pool. May spend <em>L/D</em> to gain <em>Suc</em> or <em>Adv</em> on the check.
+                      When making an Athletics check, may roll an Enhance power check as part of the pool. May spend <em>L/D</em> to gain <em>Suc</em> or <em>Adv</em> on the check. 
+                      (Force & Destiny, p288)
                     </details>
                     </td>
                 </tr>
@@ -587,39 +613,43 @@
                   <td>Enhance</td>
                   <td>Control: Piloting-Planeary</td>
                   <td>1</td>
-                  <td>Can be used with  Piloting-Planeary skill.</td>
+                  <td>Can be used with  Piloting - Planeary skill.</td>
                 </tr>
                 <tr>
                   <td>Enhance</td>
                   <td>Control: Piloting-Space</td>
                   <td>1</td>
-                  <td>Can be used with Piloting-Space skill.</td>
+                  <td>Can be used with Piloting - Space skill.</td>
                 </tr>
                 <tr>
                   <td>Enhance</td>
                   <td>Control: Force Leap (Horizontal)</td>
                   <td>A1</td>
-                  <td>Take a Force Leap Action: Make an Enhance power check. May spend L/D to Jump horizontally to any location in short range.</td>
+                  <td>Take a Force Leap Action: Make an Enhance power check. May spend L/D to Jump horizontally to any location in short range.
+                    <span class="hide">This can be used to leap over obstacles or impassable terrain but cannot leap directly vertically. 
+                      May not activate multiple times.</span></td>
                 </tr>
                 <tr>
                   <td>Heal/Harm</td> 
                   <td>Basic</td>
                   <td>1</td>
                   <td><details> <summary>Spend L/D heal or inflict wounds equal to Intellect on engaged living target.</summary>
-                    Heal: Light side user only. May heal yourself.<br>Harm: Damage ignores soak. The user gains 1 Conflict.</details></td>
+                    Heal: Light side user only. May heal yourself. Counts as stimpack use (5/day).
+                    <br>Harm: Damage ignores soak. The user gains 1 Conflict.
+                    <br>Both: May not activate multiple times. (Force & Destiny, p 292)</details></td>
                 </tr>
                 <tr>
                   <td>Manipulate</td>
                   <td>Basic</td>
                   <td>1</td>
                   <td><details> <summary>Spend L/D to cause one engaged vehicle or starship to recover one system strain. </summary>
-                    May activate multiple times.</details></td>
+                    May activate multiple times. (Endless Vigil, p36)</details></td>
                 </tr>
                 <tr>
                   <td>Manipulate</td>
                   <td>Control: Item Damage</td>
                   <td>1</td>
-                  <td>Ongoing effect. Commit F. One damaged weapon or item counts as being undamaged.</td>
+                  <td>Ongoing effect. Commit F. One damaged weapon or item counts as being undamaged.<span class="hide">May be activated multiple times.</span></td>
                 </tr>
                 <tr>
                   <td>Manipulate</td>
@@ -641,8 +671,10 @@
                     <summary>Find location of an object or see through illusions.</summary>
                        <ul>
                         <li>May spend 2 L/D to gain insight onto the general location or direction of a person or object that he knows about, regardless of current distance.</li>
-                        <li>May spend L/D and succeed at an average (PP) Vigilance check (or opposed Vigilance vs. Discipline check) to see through illusions.</li>
+                        <li>May spend L/D and succeed at an average (PP) Vigilance check (or opposed Vigilance vs. Discipline check) to see through illusions.
+                          <br>Works against tricks such as cloaking fields, holograms, Force illusions, and even phisical disguises, at GM's discretion.</li>
                       </ul>
+                      (Force & Destiny, p 302)
                     </details></td>
                 </tr>
                 <tr>
@@ -655,12 +687,93 @@
                         <li>all living things within short range.</li>
                         <li>the current emotional state of one engaged living target.</li>
                       </ul>
+                      (Force & Destiny, p 304)
                     </details></td>
+                </tr>
+                <tr>
+                  <td>Sense</td>
+                  <td>Control: Upgrade Difficulty</td>
+                  <td>1</td>
+                  <td>Ongoing effect. Commit F. Once per round when targeted by an attack, upgrade difficulty once. May activate only once.</td>
                 </tr>
               </tbody>
             </table>
           </div><!--area-division-->
         </div><!--force-page-->
+
+        <!--EQUIPMENT PAGE---------------------------------------------------------------------------------------->
+
+        <div class="one-page" id="equip-page">
+          <div class="area-division">
+            <p class="area-division-title">Equipment</p>
+            <table id="equipment" class="equip-table table-general">
+              <colgroup>
+                <col class="et-col1">
+                <col class="et-col2">
+                <col class="et-col3">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <!-- Equipment Start -->
+              <tbody>
+                <tr>
+                  <td>Defender Sporting Blaster Pistol</td>
+                  <td>Weapon</td>
+                  <td>Damage: 6, Range: Medium, Crit: 3 Adv, 1 Pierce, 3 Accuracy, Stun
+                    <span class="hide">
+                      <ul>
+                        <li>Encumberance: 1</li>
+                        <li>Hard Points: 2 (filled)</li>
+                        <li>Attachments:<br>
+                          - Reverse Engineering (adds one Hard Point)<br>
+                          - Force-Attuned Resonator (Must have Force Rating 1+ to operate<br>
+                          - Mandalorian Special (+2 Accuracy, +1 Damage, +1 Pierce)</li>
+                      </ul></span>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Sith Lord Lightsaber</td>
+                  <td>Weapon</td>
+                  <td>Damage: 8, Range: Engaged, Crit: 2 Adv, Breach 1, Sunder
+                    <span class="hide">Red Crystal. Found on a dead Sith Lord on Emperor's birth planet, Nethyma.
+                      I don't know anything else about it. Above is a guess.
+                     </span>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Jedi Robes</td>
+                  <td>Armor</td>
+                  <td>Soak: 1, Melee Def: 1, Ranged Def: 1. 
+                    <span class="hide">These simple padawan robes I got from the Jedi at the temple at Coruscant. 
+                     </span>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Pit Crew Coveralls</td>
+                  <td>Armor</td>
+                  <td>Soak: 1, Melee Def: 1, Ranged Def: 1. 
+                    <span class="hide">These simple padawan robes I got from the Jedi at the temple at Coruscant. 
+                     </span>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Crash Gear</td>
+                  <td>Armor</td>
+                  <td>Soak: 1, Melee Def: 1, Ranged Def: 1. 
+                    <span class="hide">These simple padawan robes I got from the Jedi at the temple at Coruscant. 
+                     </span>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!--area-division-->
+        </div><!--equip-page-->
+
       </div><!--outer-boundary-->
     </body>
   </html>

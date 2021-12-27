@@ -105,6 +105,10 @@
   background-color: var(--page-bg-color,silver);
 }
 
+#equip-page {
+  background-color: var(--page-bg-color, salmon);
+}
+
 /*###########################################################################################################*/
 /* SECTION-utilities */
 
@@ -243,6 +247,27 @@
 #force-powers td:hover .hide {
   display: block;
 }
+
+/*######################################################################################################################################*/
+/* SECTION-equipment */
+
+.equip-table {
+  width: 100%;
+}
+
+.et-col1 { width: 25%;}
+.et-col2 { width: 6%;}
+.et-col3 { width: auto;}
+
+.equip-table tbody tr:hover {
+  font-size: 1.3em;
+  
+}
+
+#equipment td:hover .hide {
+  display: block;
+}
+
 
 /*###########################################################################################################*/
 /* SECTION-characteristics */
